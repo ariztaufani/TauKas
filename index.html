@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TauKas</title>
+</head>
+<body>
+
+    <header>
+        <h1>Aplikasi Pengelolaan Kas</h1>
+        <p>Sistem Pencatatan Transaksi Kas Keluar & Masuk</p>
+        <nav>
+            <ul>
+                <li><a href="tambah.html">Tambah Transaksi</a></li>
+                <li><a href="index.html">Laporan Mutasi Kas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+        <article>
+            <h2>Laporan Mutasi</h2>
+
+            <section>
+                <h3>Filter Mutasi Periode</h3>
+                <form action="index.html" method="GET">
+                    <div>
+                        <label for="tanggal_mulai">Dari Tanggal:</label>
+                        <input type="date" id="tanggal_mulai" name="tanggal_mulai" value="2026-09-01">
+                    </div>
+                    <div>
+                        <label for="tanggal_selesai">Sampai Tanggal:</label>
+                        <input type="date" id="tanggal_selesai" name="tanggal_selesai" value="2026-09-27">
+                    </div>
+                    <div>
+                        <label for="pilih_bank">Pilih Bank/Kas:</label>
+                        <select id="pilih_bank" name="pilih_bank">
+                            <option value="semua">-- Semua Bank/Kas --</option>
+                            <option value="bca">BCA</option>
+                            <option value="mandiri">Mandiri</option>
+                        </select>
+                    </div>
+                    <button type="submit">Cari Mutasi</button>
+                </form>
+            </section>
+
+            <br>
+            <section>
+                <h3>Daftar Transaksi Mutasi</h3>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Tipe</th>
+                            <th>Urutan</th>
+                            <th>Nama Bank/Kas</th>
+                            <th>Tanggal Transaksi</th>
+                            <th>Keterangan</th>
+                            <th>Nominal (Rp)</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>-</td>
+                            <td><strong>Saldo Awal</strong></td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td><strong>Saldo Awal Periode</strong></td>
+                            <td><strong>0</strong></td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td><img src="assets/pemasukan.png" alt="Ikon Transaksi Kas Masuk" width="20"></td>
+                            <td>Transaksi</td>
+                            <td>BCA</td>
+                            <td>2026-09-01</td>
+                            <td>Gaji Bulanan</td>
+                            <td>50.000.000</td>
+                            <td><a href="detail.html?id=1">Lihat Detail</a></td>
+                        </tr>
+                        <tr>
+                            <td><img src="assets/pengeluaran.png" alt="Ikon Transaksi Kas Keluar" width="20"></td>
+                            <td>Transaksi</td>
+                            <td>Mandiri</td>
+                            <td>2026-09-05</td>
+                            <td>Beli Makan</td>
+                            <td>-1.500.000</td>
+                            <td><a href="detail.html?id=2">Lihat Detail</a></td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td><strong>Saldo Akhir</strong></td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td><strong>Saldo Akhir Periode</strong></td>
+                            <td><strong>48.500.000</strong></td>
+                            <td>-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </article>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2026 Aplikasi TauKas</p>
+    </footer>
+
+</body>
+</html>

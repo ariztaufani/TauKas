@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TauKas - Tambah Transaksi</title>
+</head>
+<body>
+
+    <header>
+        <h1>Aplikasi Pengelolaan Kas</h1>
+        <p>Form Catat Transaksi Masuk & Keluar</p>
+        <nav>
+            <ul>
+                <li><a href="tambah.html">Tambah Transaksi</a></li>
+                <li><a href="index.html">Laporan Mutasi Kas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+        <article>
+            <h2>Tambah Transaksi Kas Baru</h2>
+
+            <form action="index.html" method="POST">
+                <div>
+                    <label for="nama_bank">Nama Bank / Akun Kas:</label>
+                    <select id="nama_bank" name="nama_bank" required>
+                        <option value="">-- Pilih Bank --</option>
+                        <option value="bca">BCA</option>
+                        <option value="mandiri">Mandiri</option>
+                        <option value="kas_tunai">Kas Tunai</option>
+                    </select>
+                </div>
+
+                <br>
+
+                <div>
+                    <label for="pemasukan">
+                        <img src="assets/pemasukan.png" alt="Ikon Kas Masuk" width="20">
+                        Kas Masuk (Pemasukan)
+                    </label>
+                    <input type="radio" id="pemasukan" name="jenis_transaksi" value="pemasukan" checked> 
+
+                    <label for="pengeluaran">
+                        <img src="assets/pengeluaran.png" alt="Ikon Kas Keluar" width="20">
+                        Kas Keluar (Pengeluaran)
+                    </label>
+                    <input type="radio" id="pengeluaran" name="jenis_transaksi" value="pengeluaran">
+                </div>
+
+                <br>
+
+                <div>
+                    <label for="tanggal_transaksi">Tanggal Transaksi:</label>
+                    <input type="date" id="tanggal_transaksi" name="tanggal_transaksi" required>
+                </div>
+
+                <br>
+
+                <div>
+                    <label for="nominal">Nominal (Rp):</label>
+                    <input type="number" id="nominal" name="nominal" placeholder="Contoh: 1500000" required>
+                </div>
+
+                <br>
+
+                <div>
+                    <label for="keterangan">Keterangan / Deskripsi:</label>
+                    <textarea id="keterangan" name="keterangan" rows="4" cols="30" placeholder="Masukkan deskripsi transaksi..." required></textarea>
+                </div>
+
+                <br>
+
+                <div>
+                    <button type="submit">Simpan Transaksi</button>
+                    <a href="index.html">Batal</a>
+                </div>
+            </form>
+        </article>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2026 Aplikasi TauKas</p>
+    </footer>
+
+</body>
+</html>
