@@ -4,63 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TauKas - Detail Transaksi</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Aplikasi Pengelolaan Kas</h1>
-        <p>Rincian Detail Transaksi</p>
+    <header class="navbar">
+        <div class="logo">TauKas</div>
         <nav>
             <ul>
-                <li><a href="tambah.html">Tambah Transaksi</a></li>
                 <li><a href="index.html">Laporan Mutasi Kas</a></li>
+                <li><a href="tambah.html">Tambah Transaksi</a></li>
             </ul>
         </nav>
     </header>
 
-    <hr>
-
-    <main>
-
-        <article>
-           <h2>Detail Transaksi #1</h2>
-
-            <table border="1">
-                <tr>
-                    <th>ID Transaksi</th>
-                    <td>1</td>
-                </tr>
-                <tr>
-                    <th>Nama Bank/Kas</th>
-                    <td>BCA</td>
-                </tr>
-                <tr>
-                    <th>Tanggal Transaksi</th>
-                    <td>01 September 2026</td>
-                </tr>
-                <tr>
-                    <th>Kategori / Jenis</th>
-                    <td>Kas Masuk (Pemasukan)</td>
-                </tr>
-                <tr>
-                    <th>Keterangan</th>
-                    <td>Gaji Bulanan</td>
-                </tr>
-                <tr>
-                    <th>Nominal</th>
-                    <td>Rp 50.000.000</td>
-                </tr>
-            </table>
+    <main class="container">
+        <div class="card">
+            <h2>Detail Transaksi #1</h2>
+            <br>
+            <div class="table-responsive">
+                <table>
+                    <tr>
+                        <th style="width: 200px;">ID Transaksi</th>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <th>Nama Bank/Kas</th>
+                        <td>BCA</td>
+                    </tr>
+                    <tr>
+                        <th>Tanggal Transaksi</th>
+                        <td>01 September 2026</td>
+                    </tr>
+                    <tr>
+                        <th>Kategori / Jenis</th>
+                        <td class="pemasukan">Kas Masuk (Pemasukan)</td>
+                    </tr>
+                    <tr>
+                        <th>Keterangan</th>
+                        <td>Gaji Bulanan</td>
+                    </tr>
+                    <tr>
+                        <th>Nominal</th>
+                        <td class="pemasukan"><strong>Rp 50.000.000</strong></td>
+                    </tr>
+                </table>
+            </div>
 
             <br>
-
-            <nav>
-                <a href="index.html"><< Kembali ke Laporan Mutasi</a>
-            </nav>
-        </article>
+            <p><a href="index.html" style="color: #2563eb; text-decoration: none; font-weight: bold;"><< Kembali ke Laporan Mutasi</a></p>
+        </div>
     </main>
-
-    <hr>
 
     <footer>
         <p>&copy; 2026 Aplikasi TauKas</p>

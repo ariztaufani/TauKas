@@ -3,54 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TauKas</title>
+    <title>TauKas - Laporan Mutasi</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Aplikasi Pengelolaan Kas</h1>
-        <p>Sistem Pencatatan Transaksi Kas Keluar & Masuk</p>
+    <header class="navbar">
+        <div class="logo">TauKas</div>
         <nav>
             <ul>
+                <li><a href="index.html" class="active">Laporan Mutasi Kas</a></li>
                 <li><a href="tambah.html">Tambah Transaksi</a></li>
-                <li><a href="index.html">Laporan Mutasi Kas</a></li>
             </ul>
         </nav>
     </header>
 
-    <hr>
+    <main class="container">
+        
+        <div class="card">
+            <h3>Filter Mutasi Periode</h3>
+            <form action="index.html" method="GET">
+                <div class="form-group">
+                    <label for="tanggal_mulai">Dari Tanggal:</label>
+                    <input type="date" id="tanggal_mulai" name="tanggal_mulai" value="2026-09-01">
+                </div>
+                <div class="form-group">
+                    <label for="tanggal_selesai">Sampai Tanggal:</label>
+                    <input type="date" id="tanggal_selesai" name="tanggal_selesai" value="2026-09-27">
+                </div>
+                <div class="form-group">
+                    <label for="pilih_bank">Pilih Bank/Kas:</label>
+                    <select id="pilih_bank" name="pilih_bank">
+                        <option value="semua">-- Semua Bank/Kas --</option>
+                        <option value="bca">BCA</option>
+                        <option value="mandiri">Mandiri</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-primary">Cari Mutasi</button>
+            </form>
+        </div>
 
-    <main>
-        <article>
-            <h2>Laporan Mutasi</h2>
-
-            <section>
-                <h3>Filter Mutasi Periode</h3>
-                <form action="index.html" method="GET">
-                    <div>
-                        <label for="tanggal_mulai">Dari Tanggal:</label>
-                        <input type="date" id="tanggal_mulai" name="tanggal_mulai" value="2026-09-01">
-                    </div>
-                    <div>
-                        <label for="tanggal_selesai">Sampai Tanggal:</label>
-                        <input type="date" id="tanggal_selesai" name="tanggal_selesai" value="2026-09-27">
-                    </div>
-                    <div>
-                        <label for="pilih_bank">Pilih Bank/Kas:</label>
-                        <select id="pilih_bank" name="pilih_bank">
-                            <option value="semua">-- Semua Bank/Kas --</option>
-                            <option value="bca">BCA</option>
-                            <option value="mandiri">Mandiri</option>
-                        </select>
-                    </div>
-                    <button type="submit">Cari Mutasi</button>
-                </form>
-            </section>
-
-            <br>
-            <section>
-                <h3>Daftar Transaksi Mutasi</h3>
-                <table border="1">
+        <div class="card">
+            <h3>Daftar Transaksi Mutasi</h3>
+            <div class="table-responsive">
+                <table>
                     <thead>
                         <tr>
                             <th>Tipe</th>
@@ -58,54 +54,53 @@
                             <th>Nama Bank/Kas</th>
                             <th>Tanggal Transaksi</th>
                             <th>Keterangan</th>
-                            <th>Nominal (Rp)</th>
-                            <th>Aksi</th>
+                            <th class="text-right">Nominal (Rp)</th>
+                            <th class="text-center">Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>-</td>
+                            <td class="text-center">-</td>
                             <td><strong>Saldo Awal</strong></td>
                             <td>-</td>
                             <td>-</td>
                             <td><strong>Saldo Awal Periode</strong></td>
-                            <td><strong>0</strong></td>
-                            <td>-</td>
+                            <td class="text-right"><strong>0</strong></td>
+                            <td class="text-center">-</td>
                         </tr>
                         <tr>
-                            <td><img src="assets/pemasukan.png" alt="Ikon Transaksi Kas Masuk" width="20"></td>
+                            <td class="text-center"><img src="assets/pemasukan.png" alt="Kas Masuk" class="icon-kategori"></td>
                             <td>Transaksi</td>
                             <td>BCA</td>
                             <td>2026-09-01</td>
                             <td>Gaji Bulanan</td>
-                            <td>50.000.000</td>
-                            <td><a href="detail.html?id=1">Lihat Detail</a></td>
+                            <td class="text-right pemasukan">50.000.000</td>
+                            <td class="text-center"><a href="detail.html?id=1">Lihat Detail</a></td>
                         </tr>
                         <tr>
-                            <td><img src="assets/pengeluaran.png" alt="Ikon Transaksi Kas Keluar" width="20"></td>
+                            <td class="text-center"><img src="assets/pengeluaran.png" alt="Kas Keluar" class="icon-kategori"></td>
                             <td>Transaksi</td>
                             <td>Mandiri</td>
                             <td>2026-09-05</td>
                             <td>Beli Makan</td>
-                            <td>-1.500.000</td>
-                            <td><a href="detail.html?id=2">Lihat Detail</a></td>
+                            <td class="text-right pengeluaran">-1.500.000</td>
+                            <td class="text-center"><a href="detail.html?id=2">Lihat Detail</a></td>
                         </tr>
                         <tr>
-                            <td>-</td>
+                            <td class="text-center">-</td>
                             <td><strong>Saldo Akhir</strong></td>
                             <td>-</td>
                             <td>-</td>
                             <td><strong>Saldo Akhir Periode</strong></td>
-                            <td><strong>48.500.000</strong></td>
-                            <td>-</td>
+                            <td class="text-right"><strong>48.500.000</strong></td>
+                            <td class="text-center">-</td>
                         </tr>
                     </tbody>
                 </table>
-            </section>
-        </article>
-    </main>
+            </div>
+        </div>
 
-    <hr>
+    </main>
 
     <footer>
         <p>&copy; 2026 Aplikasi TauKas</p>

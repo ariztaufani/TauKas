@@ -4,28 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TauKas - Tambah Transaksi</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Aplikasi Pengelolaan Kas</h1>
-        <p>Form Catat Transaksi Masuk & Keluar</p>
+    <header class="navbar">
+        <div class="logo">TauKas</div>
         <nav>
             <ul>
-                <li><a href="tambah.html">Tambah Transaksi</a></li>
                 <li><a href="index.html">Laporan Mutasi Kas</a></li>
+                <li><a href="tambah.html" class="active">Tambah Transaksi</a></li>
             </ul>
         </nav>
     </header>
 
-    <hr>
-
-    <main>
-        <article>
+    <main class="container">
+        <div class="card">
             <h2>Tambah Transaksi Kas Baru</h2>
-
+            <br>
             <form action="index.html" method="POST">
-                <div>
+                
+                <div class="form-group">
                     <label for="nama_bank">Nama Bank / Akun Kas:</label>
                     <select id="nama_bank" name="nama_bank" required>
                         <option value="">-- Pilih Bank --</option>
@@ -35,54 +34,45 @@
                     </select>
                 </div>
 
-                <br>
+                <div class="form-group">
+                    <label>Jenis Transaksi:</label>
+                    <div class="radio-group">
+                        <label for="pemasukan" class="radio-option">
+                            <input type="radio" id="pemasukan" name="jenis_transaksi" value="pemasukan" checked> 
+                            <img src="assets/pemasukan.png" alt="Kas Masuk" class="icon-kategori"> 
+                            Kas Masuk (Pemasukan)
+                        </label>
 
-                <div>
-                    <label for="pemasukan">
-                        <img src="assets/pemasukan.png" alt="Ikon Kas Masuk" width="20">
-                        Kas Masuk (Pemasukan)
-                    </label>
-                    <input type="radio" id="pemasukan" name="jenis_transaksi" value="pemasukan" checked> 
-
-                    <label for="pengeluaran">
-                        <img src="assets/pengeluaran.png" alt="Ikon Kas Keluar" width="20">
-                        Kas Keluar (Pengeluaran)
-                    </label>
-                    <input type="radio" id="pengeluaran" name="jenis_transaksi" value="pengeluaran">
+                        <label for="pengeluaran" class="radio-option">
+                            <input type="radio" id="pengeluaran" name="jenis_transaksi" value="pengeluaran">
+                            <img src="assets/pengeluaran.png" alt="Kas Keluar" class="icon-kategori"> 
+                            Kas Keluar (Pengeluaran)
+                        </label>
+                    </div>
                 </div>
 
-                <br>
-
-                <div>
+                <div class="form-group">
                     <label for="tanggal_transaksi">Tanggal Transaksi:</label>
                     <input type="date" id="tanggal_transaksi" name="tanggal_transaksi" required>
                 </div>
 
-                <br>
-
-                <div>
+                <div class="form-group">
                     <label for="nominal">Nominal (Rp):</label>
                     <input type="number" id="nominal" name="nominal" placeholder="Contoh: 1500000" required>
                 </div>
 
-                <br>
-
-                <div>
+                <div class="form-group">
                     <label for="keterangan">Keterangan / Deskripsi:</label>
-                    <textarea id="keterangan" name="keterangan" rows="4" cols="30" placeholder="Masukkan deskripsi transaksi..." required></textarea>
+                    <textarea id="keterangan" name="keterangan" rows="4" placeholder="Masukkan deskripsi transaksi..." required></textarea>
                 </div>
 
-                <br>
-
-                <div>
-                    <button type="submit">Simpan Transaksi</button>
-                    <a href="index.html">Batal</a>
+                <div style="margin-top: 20px;">
+                    <button type="submit" class="btn-primary">Simpan Transaksi</button>
+                    <a href="index.html" style="margin-left: 10px; color: #64748b; text-decoration: none;">Batal</a>
                 </div>
             </form>
-        </article>
+        </div>
     </main>
-
-    <hr>
 
     <footer>
         <p>&copy; 2026 Aplikasi TauKas</p>
