@@ -4,61 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TauKas - Detail Transaksi</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="bg-light">
 
-    <header class="navbar">
-        <div class="logo">TauKas</div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Laporan Mutasi Kas</a></li>
-                <li><a href="tambah.html">Tambah Transaksi</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main class="container">
-        <div class="card">
-            <h2>Detail Transaksi #1</h2>
-            <br>
-            <div class="table-responsive">
-                <table>
-                    <tr>
-                        <th style="width: 200px;">ID Transaksi</th>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <th>Nama Bank/Kas</th>
-                        <td>BCA</td>
-                    </tr>
-                    <tr>
-                        <th>Tanggal Transaksi</th>
-                        <td>01 September 2026</td>
-                    </tr>
-                    <tr>
-                        <th>Kategori / Jenis</th>
-                        <td class="pemasukan">Kas Masuk (Pemasukan)</td>
-                    </tr>
-                    <tr>
-                        <th>Keterangan</th>
-                        <td>Gaji Bulanan</td>
-                    </tr>
-                    <tr>
-                        <th>Nominal</th>
-                        <td class="pemasukan"><strong>Rp 50.000.000</strong></td>
-                    </tr>
-                </table>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary fs-4" href="index.html">TauKas</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Dashboard / Mutasi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tambah.html">Tambah Transaksi</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center text-white gap-3">
+                    <span class="small">Halo, <strong>Admin Kas</strong></span>
+                    <a href="login.html" class="btn btn-outline-light btn-sm">Keluar</a>
+                </div>
             </div>
-
-            <br>
-            <p><a href="index.html" style="color: #2563eb; text-decoration: none; font-weight: bold;"><< Kembali ke Laporan Mutasi</a></p>
         </div>
-    </main>
+    </nav>
 
-    <footer>
-        <p>&copy; 2026 Aplikasi TauKas</p>
+    <div class="container my-4" style="max-width: 720px;">
+        <div class="card border-0 shadow-sm rounded-3 p-4">
+            <h4 class="fw-bold text-dark mb-3">Detail Transaksi #1</h4>
+            <hr>
+
+            <table class="table table-striped align-middle">
+                <tr>
+                    <th style="width: 200px;">ID Transaksi</th>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <th>Nama Bank/Kas</th>
+                    <td>BCA</td>
+                </tr>
+                <tr>
+                    <th>Tanggal Transaksi</th>
+                    <td>01 September 2026</td>
+                </tr>
+                <tr>
+                    <th>Kategori / Jenis</th>
+                    <td><span class="badge bg-success">Kas Masuk (Pemasukan)</span></td>
+                </tr>
+                <tr>
+                    <th>Keterangan</th>
+                    <td>Gaji Bulanan</td>
+                </tr>
+                <tr>
+                    <th>Nominal</th>
+                    <td class="fw-bold text-success fs-5">Rp 50.000.000</td>
+                </tr>
+            </table>
+
+            <div class="mt-4">
+                <a href="index.html" class="btn btn-outline-primary"><< Kembali ke Laporan Mutasi</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-white text-center py-3 border-top mt-5">
+        <p class="text-muted small mb-0">&copy; 2026 Aplikasi TauKas</p>
     </footer>
 
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
